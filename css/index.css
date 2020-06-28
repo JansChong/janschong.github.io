@@ -1,0 +1,596 @@
+/* 预设样式 begin */
+html,body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding:0;
+	min-width: 1160px;
+}
+ul,li,ol{
+	margin: 0;
+	padding:0;
+	list-style: none;
+}
+.auto-img{
+	width: 100%;
+	height: auto;
+	display: block;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clearflow{
+	overflow: hidden;
+}
+.clearfix{
+	clear:both;
+}
+a,a:hover,a:active,a:link{
+	color: #fff;
+	cursor: pointer;
+    text-decoration:none;
+}
+h1,h2,h3,h4,h5,h6,p{
+	margin: 0;
+	padding:0;
+}
+input, button, select, textarea {
+	height: 40px;
+    width: 250px;
+    outline: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    background-color: rgba(0,0,0,.0);
+    border: 1px solid #ddd;
+    margin: 10px 20px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    color: #fff;
+
+}
+/* 预设样式 end */
+
+/* banner begin */
+.box .banner{
+	width: 100%;
+	height: 375px;
+	background: url(../images/banner.jpg) no-repeat center center;
+	-moz-background-size: 100%;
+	     background-size: 100%;
+	position: relative;
+}
+.box .banner .modul{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	/*background-color: rgba(0,0,0,.2);*/
+}
+.banner .modul .modul-box{
+	width: 980px;
+	margin: 0 auto;
+    margin-top: -moz-calc((375px - 330px)/2);
+    margin-top: calc((375px - 330px)/2);
+}
+
+.modul-box .lt-box{
+      width: 270px;
+    height: 330px;
+    overflow: hidden;
+    position: relative;
+}
+.modul-box .lt-box .img{
+    position: absolute;
+    left: 0;
+    top: -55px;
+}
+
+.modul-box .rt-box {
+	width: 660px;
+	height: 330px;
+}
+
+.modul-box .rt-box .top{
+	height: 130px;
+	width: 100%;
+	/* background-color: #f00; */
+	border-bottom:1px solid #fff;
+}
+
+.modul-box .rt-box .bottom{
+	height: 200px;
+	width: 100%;
+}
+.modul-box .rt-box .title{
+    width: 80px;
+    height: 30px;
+    background-color: #dd0;
+    text-align: center;
+    line-height: 30px;
+	position: relative;
+}
+.modul-box .rt-box .title:before{
+    content: '';
+    border: 8px solid #dd0;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    position: absolute;
+    left: 10px;
+    bottom: -16px;
+}
+
+.modul-box .rt-box .center{
+   color: #fff;
+   font-size: 30px;
+   padding:10px 0 5px;
+  letter-spacing: 1px;
+}
+.modul-box .rt-box .bottom-box{
+	color: #fff;
+	letter-spacing: 1.5px;
+}
+
+.rt-box .bottom ul{
+	width: 100%;
+	height: 100%;
+}
+.rt-box .bottom ul li{
+    float: left;
+    display: block;
+    width: 100%;
+    color: #fff;
+    padding: 6.5px 0;
+}
+.rt-box .bottom ul li span{
+	padding-left: 60px;
+}
+/* banner end */ 
+
+/* nav begin */
+.box .nav{
+	width: 100%;
+	background-color: #008a8a;
+}
+.nav ul{
+	width: 810px;
+	margin: 0 auto;
+}
+.nav ul li{
+	width: -moz-calc(100% / 6);
+	width: calc(100% / 6);
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	cursor: pointer;
+}
+/* nav end */
+
+/* 关于我 begin */
+.box .me{
+	width: 100%;
+/*	background-color: #dd0;*/
+}
+.me h1{
+	padding-top: 60px;
+	font-size:50px;
+	text-align: center;
+	font-weight: normal;
+	color: #008a8a;
+}
+.me .content{
+	width: 980px;
+	margin:0 auto;
+	color: #555;
+	/*background-color: #dd0;*/
+}
+.me .line{
+	margin-top: 8px;
+	width: 100%;
+	height: 2px;
+	border:1px solid #f2efdb;
+	border-left: transparent;
+	border-right: transparent;
+}
+.me .content .lift{
+	width: 68%;
+	height:330px;
+	padding: 40px 20px;
+	box-sizing: border-box;
+	font-size: 20px;
+	text-indent: 2em;
+	line-height: 50px;
+}
+
+.me .content .right{
+	width: 32%;
+	height:330px;
+		padding: 33px 10px;
+		box-sizing: border-box;
+	/*background-color: #ff0;*/
+}
+.me .content .right .item{
+	width: 100%;
+	height: 100%;
+	border: 1px solid #417e7d;
+	box-sizing: border-box;
+	position: relative;
+}
+.me .content .right .item::before{
+	content: '';
+	width: calc(100% - 2px);
+	height: calc(100% - 2px);
+	border: 1px solid #417e7d;
+	box-sizing: border-box;
+	position: absolute;
+	left: 0;
+	top:0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+.me .right .item li{
+	width: 100%;
+	height:45px;
+	padding-left: 25px;
+	box-sizing: border-box;
+}
+.me .right .item li:first-child{
+    color: #118a7f;
+    text-align: center;
+    line-height: 55px;
+    font-size: 30px;
+    padding-left: 0;
+    padding-bottom: 20px;
+    box-sizing: content-box;
+
+}
+/* 关于我 end */
+
+
+
+/* 个人经历 begin */
+.box .experience {
+		width: 100%;
+	background-color: #000;
+}
+
+.experience h1{
+	padding-top: 60px;
+	font-size:50px;
+	text-align: center;
+	font-weight: normal;
+	color: #008a8a;
+}
+
+.experience .content{
+	width: 980px;
+	margin:0 auto;
+	color: #555;
+		/*background-color: #dd0;*/
+}
+.experience .line{
+	margin-top: 8px;
+	margin-bottom: 40px;
+	width: 100%;
+	height: 2px;
+	border:1px solid #222;
+	border-left: transparent;
+	border-right: transparent;
+}
+.experience .blackbox{
+	height: 860px;
+	width: 2px;
+	margin: 0 auto;
+	background-color: #ddd;
+	position: relative;
+	margin-bottom: 60px;
+}
+.experience .blackbox div{
+	position: absolute;
+	color: #fff;
+
+}
+.experience .blackbox .time{
+    background-color: #028988;
+    width: 77px;
+    padding: 5px 15px;
+    left: -200px;
+    top: 60px;
+    position: relative;
+}
+.experience .blackbox .time:nth-child(4){
+	width: 92px;
+	left: 110px;
+	top: 271px;
+}
+.experience .blackbox .time:nth-child(7){
+	width: 92px;
+	 left: -215px;
+	top: 480px;
+}
+.experience .blackbox .time:nth-child(10){
+	width: 92px;
+	left: 110px;
+	top: 656px;
+}
+
+.experience .blackbox .time::before{
+    content: '';
+    position: absolute;
+    right: -27px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border: 10px solid #028988;
+    border-left: 18px solid #028988;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+.experience .blackbox .time:nth-child(4)::before{
+    content: '';
+    position: absolute;
+    left: -175px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border: 10px solid #028988;
+    border-right: 18px solid #028988;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+.experience .blackbox .time:nth-child(10)::before{
+	 content: '';
+    position: absolute;
+    left: -175px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border: 10px solid #028988;
+    border-right: 18px solid #028988;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+.experience .blackbox .icon{
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    /* padding: 5px 15px; */
+    left: -19px;
+    top: 55px;
+    background:#028988 url(../images/wechat_03.png) no-repeat center center;
+    background-size: 35% 35%;
+}
+.experience .blackbox .icon:nth-child(5){
+    top: 297px;
+}
+.experience .blackbox .icon:nth-child(8){
+    top: 538px;
+}
+.experience .blackbox .icon:nth-child(11){
+    top: 743px;
+}
+
+.experience .blackbox .dele{
+	width: 128px;
+    border: 1px solid #a49e12;
+    color: #a49e12;
+    padding: 5px 10px;
+    position: absolute;
+    left: 95px;
+    top: 60px;
+}
+.experience .blackbox .dele:nth-child(6){
+	width: 64px;
+    border: 1px solid #a49e12;
+    color: #a49e12;
+    padding: 5px 10px;
+    position: absolute;
+    left: -175px;
+    top: 300px;
+}
+.experience .blackbox .dele:nth-child(9){
+	width: 96px;
+    border: 1px solid #a49e12;
+    color: #a49e12;
+    padding: 5px 10px;
+    position: absolute;
+    left: 100px;
+    top: 543px;
+}
+.experience .blackbox .dele:nth-child(12){
+	width: 64px;
+    border: 1px solid #a49e12;
+    color: #a49e12;
+    padding: 5px 10px;
+    position: absolute;
+    left: -175px;
+    top: 745px;
+}
+/* 个人经历 end */
+
+/* 教育背景 begin */
+.bais{
+	background-color: #fff!important;
+}
+.bais .line{
+	border-color: #ddd;
+}
+.bais .blackbox{
+	height:650px;
+ background-color: #999;
+ margin-bottom: 60px;
+}
+.bais .blackbox .icon{
+	 background:#028988 url(../images/wechat_07.png) no-repeat center center;
+    background-size: 35% 35%;
+}
+/* 教育背景 end */
+
+/*专业技能 begin*/
+.box .zhuangye{
+	width: 100%;
+	background-color: #000;
+}
+.zhuangye h1{
+	padding-top: 60px;
+	font-size:50px;
+	text-align: center;
+	font-weight: normal;
+	color: #008a8a;
+}
+.zhuangye .content{
+	width: 980px;
+	margin:0 auto;
+	color: #555;
+	/*background-color: #dd0;*/
+}
+.zhuangye .line{
+	margin-top: 8px;
+	width: 100%;
+	height: 2px;
+	border:1px solid #555;
+	border-left: transparent;
+	border-right: transparent;
+}
+.zhuangye .left,.zhuangye .right{
+	width: calc(50% - 70px);
+
+	float: left;
+	margin: 25px 35px;
+	padding:20px;
+	box-sizing: border-box;
+}
+
+.zhuangye ul li{
+	/*border:1px solid #f00;*/
+	color:#fff;
+	margin-bottom: 30px;
+}
+.zhuangye ul li .btm{
+	width: 100%;
+	height: 10px;
+	border-radius: 5px;
+	background: repeating-linear-gradient(45deg,#786c04 0%,#786c04 5%, #89832a 5%,#89832a 10%);
+	margin-top: 5px;
+	position: relative;
+	overflow: hidden;
+}
+.btm::before{
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: #302c06;
+	height: 100%;
+}
+.ps::before{	
+	width: 20%;	
+}
+.wangluo::before{
+	width: 34%;
+}
+.word::before{
+	width: 25%;
+}
+.goutong::before{
+	width: 12%;
+}
+.dw::before{
+	width: 50%;
+}
+.jingji::before{
+	width: 35%;
+}
+/*专业技能 end*/
+
+/* 请联系我 begin */
+.box .callme{
+	width: 100%;
+	background-color: #000;
+}
+.callme h1{
+	padding-top: 60px;
+	font-size:50px;
+	text-align: center;
+	font-weight: normal;
+	color: #008a8a;
+}
+.callme .content{
+	width: 980px;
+	margin:0 auto;
+	color: #555;
+	/*background-color: #dd0;*/
+}
+.callme .line{
+	margin-top: 8px;
+	width: 100%;
+	height: 2px;
+	border:1px solid #555;
+	border-left: transparent;
+	border-right: transparent;
+	margin-bottom: 50px;
+}
+.callme .box{
+	width: 50%;
+	height: 530px;
+
+}
+.utop{
+	 margin: 20px;
+}
+.w{
+	width: 96%;
+	
+}
+.Message{
+	height: 100px;
+	resize:none;
+	color: #fff;
+}
+ul li .botton{
+	width: 96%;
+	height: 50px;
+	cursor: pointer;
+	background-color: #008a8a;
+}
+ul li .botton:active{
+	box-shadow: -1px -1px 5px 2px rgba(0,0,0,.5) inset;
+}
+/* 请联系我 end */
+
+/* 白色过渡 begin */
+.out{
+	width: 100%;
+	height: 100px;
+	background-color: #fff;
+}
+/* 白色过渡 end */
+
+/* 版权begin */
+.box-btm{
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	background-color: #1f1f1f;
+	color: #fff;
+}
+/* 版权end */
