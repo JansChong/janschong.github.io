@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            h2 {
+                  margin-top: 210px;
+                  word-spacing: 15px;
+                  text-align: center;
+            }
+
+            #afterLuckyNumbers {
+                  margin-left: 50px;
+            }
+      </style>
+</head>
+
+<body>
+      <h2 onclick="fn()">
+            <span id="beforeLuckyNumbers"></span>
+            <span id="afterLuckyNumbers"></span>
+      </h2>
+      <script>
+            // 1注大乐透号码由7个数字组成：前区5个+后区2个。前区号码从1-35任选5个，后区号码从1-12任选2个。
+
+            
+
+            function fn() {
+                  let before_lucky_array = []; // 前区号码从1-35任选5个
+                  let after_lucky_array = []; // 后区号码从1-12任选2个
+
+                  // [0, 1)  [0, 35)  [1, 36) 向下取整
+                  // let lucky_number = Math.floor(Math.random() * 35 + 1);
+
+                  // 前区5个数字
+                  while (before_lucky_array.length < 5) {
+                        // [0, 1)  [0, 35)  [1, 36) 向下取整
+                        let lucky_number = Math.floor(Math.random() * 35 + 1);
+
+                        // 数字不在数组中
+                        if (before_lucky_array.indexOf(lucky_number) == -1) {
+                              before_lucky_array.push(lucky_number);
+                        }
+                  }
+
+
+                  // 前区5个数字
+                  while (after_lucky_array.length < 2) {
+                        // [0, 1)  [0, 12)  [1, 13) 向下取整
+                        let lucky_number = Math.floor(Math.random() * 12 + 1);
+
+                        // 数字不在数组中
+                        if (after_lucky_array.indexOf(lucky_number) == -1) {
+                              after_lucky_array.push(lucky_number);
+                        }
+                  }
+
+
+                  console.log(before_lucky_array.sort(function (a, b) {
+                        return a - b;
+                  }), after_lucky_array.sort(function (a, b) {
+                        return a - b;
+                  }));
+
+                  // 展示
+                  beforeLuckyNumbers.innerText = before_lucky_array.join(" ");
+                  afterLuckyNumbers.innerText = after_lucky_array.join(" ");
+            }
+
+            fn();
+      </script>
+</body>
+
+</html>
