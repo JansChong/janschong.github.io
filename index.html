@@ -12,8 +12,23 @@
                   text-align: center;
             }
 
-            #afterLuckyNumbers {
+
+            #afterLuckyNumbers,
+            .afterLuckyNumbers {
                   margin-left: 50px;
+            }
+
+            #btn {
+                  position: fixed;
+                  right: 30px;
+                  bottom: 30px;
+            }
+
+            #history_list {
+                  margin: 230px auto 0;
+                  width: 400px;
+                  text-align-last: justify;
+                  display: none;
             }
       </style>
 </head>
@@ -23,11 +38,18 @@
             <span id="beforeLuckyNumbers"></span>
             <span id="afterLuckyNumbers"></span>
       </h2>
+
+      <div id="btn" >
+            show history
+      </div>
+
+      <div id="history_list"></div>
+
       <script>
+            let history = [];
+
+
             // 1注大乐透号码由7个数字组成：前区5个+后区2个。前区号码从1-35任选5个，后区号码从1-12任选2个。
-
-            
-
             function fn() {
                   let before_lucky_array = []; // 前区号码从1-35任选5个
                   let after_lucky_array = []; // 后区号码从1-12任选2个
@@ -39,6 +61,7 @@
                   while (before_lucky_array.length < 5) {
                         // [0, 1)  [0, 35)  [1, 36) 向下取整
                         let lucky_number = Math.floor(Math.random() * 35 + 1);
+                        lucky_number = lucky_number < 10 ? "0" + lucky_number : lucky_number;
 
                         // 数字不在数组中
                         if (before_lucky_array.indexOf(lucky_number) == -1) {
@@ -47,10 +70,11 @@
                   }
 
 
-                  // 前区5个数字
+                  // 后区2个数字
                   while (after_lucky_array.length < 2) {
                         // [0, 1)  [0, 12)  [1, 13) 向下取整
                         let lucky_number = Math.floor(Math.random() * 12 + 1);
+                        lucky_number = lucky_number < 10 ? "0" + lucky_number : lucky_number;
 
                         // 数字不在数组中
                         if (after_lucky_array.indexOf(lucky_number) == -1) {
@@ -65,12 +89,26 @@
                         return a - b;
                   }));
 
-                  // 展示
+                  // 展示到页面
                   beforeLuckyNumbers.innerText = before_lucky_array.join(" ");
                   afterLuckyNumbers.innerText = after_lucky_array.join(" ");
+
+
+                  // 五次历史记录
+                  if (history.length < 20) {
+                        history.push(before_lucky_array.concat(after_lucky_array));
+                        history_list.innerHTML += ` 
+                              <h4><span class="beforeLuckyNumbers">${before_lucky_array.join(" ")}</span>
+                              <span class="afterLuckyNumbers">${after_lucky_array.join(" ")}</span></h4>
+                              `
+                  }
             }
 
             fn();
+
+            btn.onclick = function (){
+                  history_list.style.display = "block";
+            }
       </script>
 </body>
 
