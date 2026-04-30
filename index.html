@@ -106,8 +106,21 @@
 
             fn();
 
+            // 显示记录
+            let isshow = false;
+            // 切换
             btn.onclick = function (){
-                  history_list.style.display = "block";
+                  isshow = !isshow;
+                  // 显示
+                  if(isshow){
+                        btn.innerText = "hide history" 
+                        history_list.style.display = "block";
+                  }
+                  // 隐藏
+                  else{
+                        btn.innerText = "show history" 
+                        history_list.style.display = "none";
+                  }
             }
       </script>
 </body>
